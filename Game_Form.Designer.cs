@@ -35,6 +35,8 @@ namespace Game_project
             this.btn_ShootAway = new System.Windows.Forms.Button();
             this.btn_PlayAgain = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
+            this.Image_showBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Image_showBox)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Load
@@ -113,11 +115,20 @@ namespace Game_project
             this.btn_Exit.UseVisualStyleBackColor = false;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
+            // Image_showBox
+            // 
+            this.Image_showBox.Location = new System.Drawing.Point(115, 43);
+            this.Image_showBox.Name = "Image_showBox";
+            this.Image_showBox.Size = new System.Drawing.Size(453, 277);
+            this.Image_showBox.TabIndex = 6;
+            this.Image_showBox.TabStop = false;
+            // 
             // Game_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Image_showBox);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_PlayAgain);
             this.Controls.Add(this.btn_ShootAway);
@@ -127,6 +138,7 @@ namespace Game_project
             this.Name = "Game_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game Form";
+            ((System.ComponentModel.ISupportInitialize)(this.Image_showBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -139,6 +151,7 @@ namespace Game_project
         private System.Windows.Forms.Button btn_ShootAway;
         private System.Windows.Forms.Button btn_PlayAgain;
         private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.PictureBox Image_showBox;
     }
 }
 
