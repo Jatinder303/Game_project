@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
@@ -62,6 +63,10 @@ namespace Game_project
             //code to play an audio on button click
             System.Media.SoundPlayer Sound_Object = new System.Media.SoundPlayer(Game_project.Properties.Resources.spinnn);
             Sound_Object.Play();
+
+            //spin the bullet
+            Random Obj_random = new Random();
+            Obj_Logic.spin_bullet = Obj_random.Next(1, 7);
         }
 
         private void btn_rules_Click(object sender, System.EventArgs e)
