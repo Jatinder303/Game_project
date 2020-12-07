@@ -37,7 +37,6 @@ namespace Game_project
             Bitmap bmp_Object = new Bitmap(myStream);
             Image_showBox.Image = bmp_Object;
 
-
             //code to play an audio on button click
             System.Media.SoundPlayer Sound_Object = new System.Media.SoundPlayer(Game_project.Properties.Resources.gun);
             Sound_Object.Play();
