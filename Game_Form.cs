@@ -44,7 +44,7 @@ namespace Game_project
             Sound_Object.Play();
 
             //Load logic
-            Obj_Logic.load_bullet = 1;
+            Obj_Logic.Hammer_Position = 1;
         }
 
         private void btn_Spin_Click(object sender, System.EventArgs e)
@@ -66,13 +66,33 @@ namespace Game_project
 
             //spin the bullet
             Random Obj_random = new Random();
-            Obj_Logic.spin_bullet = Obj_random.Next(1, 7);
+            Obj_Logic.Bullet_Position = Obj_random.Next(1, 7);
+            MessageBox.Show("Bullet position " + Obj_Logic.Bullet_Position);
         }
 
         private void btn_rules_Click(object sender, System.EventArgs e)
         {
             Instuction_Form Obj_inst = new Instuction_Form();
             Obj_inst.Show();
+        }
+
+        private void btn_Shoot_Click(object sender, EventArgs e)
+        {
+            Obj_Logic.Fire_on_Head = Obj_Logic.shoot();
+            if (Obj_Logic.Fire_on_Head == 1)
+            {
+
+                MessageBox.Show("Sorry, you are dead now");
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("Empty Shot");
+
+
+            }
         }
     }
 }

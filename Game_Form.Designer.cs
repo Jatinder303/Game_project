@@ -77,6 +77,7 @@ namespace Game_project
             this.btn_Shoot.TabIndex = 2;
             this.btn_Shoot.Text = "Shoot";
             this.btn_Shoot.UseVisualStyleBackColor = false;
+            this.btn_Shoot.Click += new System.EventHandler(this.btn_Shoot_Click);
             // 
             // btn_ShootAway
             // 
