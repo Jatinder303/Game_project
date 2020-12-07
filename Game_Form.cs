@@ -7,6 +7,7 @@ namespace Game_project
 {
     public partial class Game_Form : Form
     {
+        Game_Logic Obj_Logic = new Game_Logic();
         public Game_Form()
         {
             InitializeComponent();
@@ -27,8 +28,8 @@ namespace Game_project
 
         private void btn_Load_Click(object sender, System.EventArgs e)
         {
-            btn_Spin.Enabled = true;
-            btn_Load.Enabled = false;
+            btn_Spin.Enabled = true; // this code enables the spin button
+            btn_Load.Enabled = false; // disable the load button
 
             //code to display image in picture box on button click   
 
@@ -40,6 +41,9 @@ namespace Game_project
             //code to play an audio on button click
             System.Media.SoundPlayer Sound_Object = new System.Media.SoundPlayer(Game_project.Properties.Resources.gun);
             Sound_Object.Play();
+
+            //Load logic
+            Obj_Logic.load_bullet = 1;
         }
 
         private void btn_Spin_Click(object sender, System.EventArgs e)
@@ -58,6 +62,12 @@ namespace Game_project
             //code to play an audio on button click
             System.Media.SoundPlayer Sound_Object = new System.Media.SoundPlayer(Game_project.Properties.Resources.spinnn);
             Sound_Object.Play();
+        }
+
+        private void btn_rules_Click(object sender, System.EventArgs e)
+        {
+            Instuction_Form Obj_inst = new Instuction_Form();
+            Obj_inst.Show();
         }
     }
 }

@@ -36,6 +36,7 @@ namespace Game_project
             this.btn_PlayAgain = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.Image_showBox = new System.Windows.Forms.PictureBox();
+            this.btn_rules = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Image_showBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,11 +124,25 @@ namespace Game_project
             this.Image_showBox.TabIndex = 6;
             this.Image_showBox.TabStop = false;
             // 
+            // btn_rules
+            // 
+            this.btn_rules.BackColor = System.Drawing.Color.DimGray;
+            this.btn_rules.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_rules.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_rules.Location = new System.Drawing.Point(649, 249);
+            this.btn_rules.Name = "btn_rules";
+            this.btn_rules.Size = new System.Drawing.Size(122, 47);
+            this.btn_rules.TabIndex = 7;
+            this.btn_rules.Text = "Rules";
+            this.btn_rules.UseVisualStyleBackColor = false;
+            this.btn_rules.Click += new System.EventHandler(this.btn_rules_Click);
+            // 
             // Game_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_rules);
             this.Controls.Add(this.Image_showBox);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_PlayAgain);
@@ -152,6 +167,7 @@ namespace Game_project
         private System.Windows.Forms.Button btn_PlayAgain;
         private System.Windows.Forms.Button btn_Exit;
         private System.Windows.Forms.PictureBox Image_showBox;
+        private System.Windows.Forms.Button btn_rules;
     }
 }
 

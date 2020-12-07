@@ -52,10 +52,20 @@
     <Compile Include="Game_Form.Designer.cs">
       <DependentUpon>Game_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Game_Logic.cs" />
+    <Compile Include="Instuction_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instuction_Form.Designer.cs">
+      <DependentUpon>Instuction_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Game_Form.resx">
       <DependentUpon>Game_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instuction_Form.resx">
+      <DependentUpon>Instuction_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
