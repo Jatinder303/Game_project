@@ -36,6 +36,11 @@ namespace Game_project
             Stream myStream = myAssembly.GetManifestResourceStream("Game_project.Resources.Cricket.gif");
             Bitmap bmp_Object = new Bitmap(myStream);
             Image_showBox.Image = bmp_Object;
+
+
+            //code to play an audio on button click
+            System.Media.SoundPlayer Sound_Object = new System.Media.SoundPlayer(Game_project.Properties.Resources.gun);
+            Sound_Object.Play();
         }
 
         private void btn_Spin_Click(object sender, System.EventArgs e)
@@ -50,6 +55,10 @@ namespace Game_project
             Stream myStream = myAssembly.GetManifestResourceStream("Game_project.Resources.Football.gif");
             Bitmap bmp_Object = new Bitmap(myStream);
             Image_showBox.Image = bmp_Object;
+
+            //code to play an audio on button click
+            System.Media.SoundPlayer Sound_Object = new System.Media.SoundPlayer(Game_project.Properties.Resources.spinnn);
+            Sound_Object.Play();
         }
     }
 }
