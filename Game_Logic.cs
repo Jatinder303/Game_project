@@ -4,7 +4,8 @@
     {
         public int Hammer_Position;
         public int Bullet_Position;
-        public int Fire_on_Head;
+        public int Fire;
+        public int chances = 1;
 
 
         public int shoot()

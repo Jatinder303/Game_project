@@ -90,6 +90,7 @@ namespace Game_project
             this.btn_ShootAway.TabIndex = 3;
             this.btn_ShootAway.Text = "Shoot_Away";
             this.btn_ShootAway.UseVisualStyleBackColor = false;
+            this.btn_ShootAway.Click += new System.EventHandler(this.btn_ShootAway_Click);
             // 
             // btn_PlayAgain
             // 

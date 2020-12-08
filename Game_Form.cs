@@ -78,21 +78,46 @@ namespace Game_project
 
         private void btn_Shoot_Click(object sender, EventArgs e)
         {
-            Obj_Logic.Fire_on_Head = Obj_Logic.shoot();
-            if (Obj_Logic.Fire_on_Head == 1)
+            Obj_Logic.Fire = Obj_Logic.shoot();
+            if (Obj_Logic.Fire == 1)
             {
-
                 MessageBox.Show("Sorry, you are dead now");
-
-
-
             }
             else
             {
                 MessageBox.Show("Empty Shot");
-
-
             }
+        }
+
+        private void btn_ShootAway_Click(object sender, EventArgs e)
+        {
+            if (Obj_Logic.chances <= 2)
+            {
+                Obj_Logic.Fire = Obj_Logic.shoot();
+                if (Obj_Logic.Fire == 1)
+                {
+                    MessageBox.Show("Wow, you are safe");
+                    btn_ShootAway.Enabled = false;
+                    btn_Shoot.Enabled = false;
+
+                }
+                else
+                {
+                    MessageBox.Show("Empty Shot");
+                }
+                Obj_Logic.chances++;
+                if (Obj_Logic.chances == 3)
+                {
+                    MessageBox.Show("Your lifelines are finished");
+                    btn_ShootAway.Enabled = false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Your lifelines are finished");
+                btn_ShootAway.Enabled = false;
+            }
+
         }
     }
 }
